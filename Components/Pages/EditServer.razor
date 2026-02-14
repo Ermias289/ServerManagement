@@ -1,0 +1,16 @@
+﻿@page "/server/{serverId:int}"
+
+<h3>EditServer sever @serverId</h3>
+@server.Name 
+@server.City
+@code {
+	[Parameter]
+
+	public int serverId { get; set; }
+	private Server server;
+
+	protected override void OnParametersSet()
+	{
+		server = ServersRepository.GetServerById(serverId);
+	}
+}
