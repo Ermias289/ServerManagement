@@ -1,5 +1,5 @@
-﻿<p>
-	@Server.Name is located in @Server.City.
+﻿<p style = "@($"color: {(Server.IsOnline ? "green" : "red")}")">
+	@Server.Name is located in @Server.City and it is currently @(Server.IsOnline ? "Online" : "Offline").
 </p>
 
 
