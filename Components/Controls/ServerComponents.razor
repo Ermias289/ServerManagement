@@ -1,12 +1,11 @@
 ﻿<p>
-	Server is @Status at @DateTime.Now.
+	@Server.Name is located in @Server.City.
 </p>
 
-<button class="btn btn-primary" @onclick="ChangeStatus">Change Status</button>
 
 @code {
 
-	private Server Server = new 
+	private Server Server = new Server { Name = "Server 1", City = " Addis Ababa "};
 
 	
 }
